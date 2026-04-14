@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="hi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>शिक्षा - श्री बांके बिहारी शिक्षा प्रसार समिति</title>
+    <meta name="description" content="हमारी मुफ़्त शिक्षा पहल के बारे में जानें। बच्चों को सशक्त बनाने वाले हमारे कार्यक्रम और गैलरी देखें।">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { primary: '#1A365D', secondary: '#F97316', accent: '#166534' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-banner { position: relative; background-color: #1A365D; background-size: cover; background-position: center; }
+        .hero-overlay { position: absolute; inset: 0; background: linear-gradient(rgba(26, 54, 93, 0.7), rgba(26, 54, 93, 0.9)); }
+        .masonry-grid { column-count: 1; column-gap: 1.5rem; }
+        @media (min-width: 640px) { .masonry-grid { column-count: 2; } }
+        @media (min-width: 1024px) { .masonry-grid { column-count: 3; } }
+        .masonry-item { break-inside: avoid; margin-bottom: 1.5rem; }
+    </style>
+</head>
+<body class="antialiased text-gray-800 bg-gray-50 flex flex-col min-h-screen">
+
+    <header class="sticky top-0 z-50 bg-white shadow-md transition-all duration-300">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center relative">
+            <a href="index.html" class="text-xl md:text-2xl font-extrabold text-primary flex items-center gap-2 whitespace-nowrap">श्री बांके बिहारी शिक्षा प्रसार समिति</a>
+            <nav class="hidden lg:flex items-center space-x-8 font-medium">
+                <a href="index.html#about" class="text-gray-600 hover:text-primary transition-colors text-sm uppercase">हमारे बारे में</a>
+                <a href="gow-sewa.html" class="text-gray-600 hover:text-primary transition-colors text-sm uppercase">गौ सेवा</a>
+                <a href="relief-work.html" class="text-gray-600 hover:text-primary transition-colors text-sm uppercase">राहत कार्य</a>
+                <a href="education.html" class="text-primary font-bold border-b-2 border-primary pb-1 text-sm uppercase">शिक्षा</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="index.html#donate" class="hidden md:inline-block bg-secondary hover:bg-orange-600 text-white font-semibold py-2.5 px-6 rounded-full shadow-lg transition">अभी दान करें</a>
+                <button id="mobile-menu-btn" class="lg:hidden text-primary p-2" aria-label="Toggle Menu">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+        <nav id="mobile-menu" style="display: none;" class="absolute w-full left-0 bg-white border-t border-gray-100 shadow-xl z-40">
+             <div class="px-6 py-6 flex flex-col space-y-4">
+                <a href="index.html" class="text-gray-600 mobile-link font-medium">होम</a>
+                <a href="gow-sewa.html" class="text-gray-600 mobile-link font-medium">गौ सेवा</a>
+                <a href="relief-work.html" class="text-gray-600 mobile-link font-medium">राहत कार्य</a>
+                <a href="education.html" class="text-primary font-bold mobile-link">शिक्षा</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow">
+        <section id="page-hero" class="hero-banner pt-32 pb-24 relative overflow-hidden">
+            <div class="hero-overlay z-0"></div>
+            <div class="container mx-auto px-4 relative z-10 text-center">
+                <div class="inline-block bg-blue-100/20 text-blue-200 font-semibold px-4 py-1.5 rounded-full mb-6 text-sm tracking-widest uppercase">मुख्य पहल</div>
+                <h1 id="hero-title" class="text-4xl md:text-6xl font-extrabold text-white mb-6 drop-shadow-lg">लोड हो रहा है...</h1>
+                <p id="hero-subtitle" class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto font-light">जानकारी प्राप्त की जा रही है...</p>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="flex items-center justify-between mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 flex items-center gap-3">
+                        <svg class="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        आगामी और पिछले कार्यक्रम
+                    </h2>
+                </div>
+                <div id="events-container" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-50 border-t border-gray-200">
+            <div class="container mx-auto px-4 max-w-7xl">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-extrabold text-primary mb-4">ज़मीनी कार्य की गैलरी</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">ज़मीन पर हमारे प्रभाव की दृश्य कहानियाँ।</p>
+                </div>
+                <div id="gallery-container" class="masonry-grid"></div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-primary text-white relative">
+            <div class="container mx-auto px-4 max-w-6xl relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-extrabold mb-4">वीडियो रिपोर्ट</h2>
+                    <p class="text-lg text-blue-200">देखें कि आपका सहयोग कैसे बदलाव ला रहा है।</p>
+                </div>
+                <div id="videos-container" class="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+            </div>
+        </section>
+    </main>
+
+    <section class="py-16 bg-secondary text-center text-white">
+        <h3 class="text-3xl font-bold mb-6">सीधा प्रभाव डालना चाहते हैं?</h3>
+        <a href="index.html#donate" class="inline-block bg-white text-secondary font-extrabold text-lg py-4 px-10 rounded-full shadow-2xl hover:-translate-y-1 transition transform">
+            हमारे कार्यों में सहयोग करें
+        </a>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="bg-[#111827] text-gray-300 py-16 border-t border-gray-800 text-center md:text-left">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center md:items-start gap-12">
+            
+            <div class="md:w-1/2">
+                <h4 class="text-white text-2xl font-extrabold mb-4 tracking-tight">श्री बांके बिहारी शिक्षा प्रसार समिति</h4>
+                <p class="text-base text-gray-400 max-w-lg mx-auto md:mx-0 leading-relaxed">
+                    आप सभी से विनम्र निवेदन है की इस पुण्य कार्य (शिक्षा, गरीबों की मदद व गौ सेवा) में सहयोग करें। आपका छोटा सा सहयोग किसी के जीवन में बड़ा बदलाव ला सकता है। धन्यवाद्।
+                </p>
+            </div>
+            
+            <div class="md:w-1/2 flex flex-col items-center md:items-end gap-6 w-full">
+                <div class="flex flex-col gap-4 bg-gray-800/50 p-6 rounded-2xl border border-gray-700 w-full max-w-sm">
+                    <h5 class="text-white font-bold text-lg mb-2 border-b border-gray-700 pb-2">संपर्क करें (Contact Us)</h5>
+                    <a href="https://wa.me/919559322718" target="_blank" class="flex items-center gap-4 hover:text-white transition group">
+                        <div class="bg-green-500/20 p-3 rounded-full group-hover:bg-green-500/30 transition">
+                            <svg class="w-6 h-6 text-green-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.573-.187-.982-.365-2.114-.92-3.483-3.078-3.587-3.216-.104-.138-.859-1.144-.859-2.183 0-1.04.542-1.554.733-1.761.191-.208.414-.26.551-.26.138 0 .276.001.393.006.126.006.295-.049.444.316.149.366.505 1.238.55 1.332.046.094.076.204.004.348-.065.145-.102.234-.236.388-.133.153-.284.34-.403.458-.127.126-.263.264-.112.527.152.261.677 1.119 1.455 1.815.998.89 1.826 1.157 2.083 1.28.257.124.407.104.561-.072.153-.176.666-.777.844-1.044.178-.268.356-.223.593-.134.238.089 1.5.707 1.76.837.259.13.432.194.494.303.064.108.064.629-.08 1.034z"/></svg>
+                        </div>
+                        <span class="font-semibold text-lg tracking-wide">+91 9559322718</span>
+                    </a>
+                    <a href="mailto:bankebiharisikaha@gmail.com" class="flex items-center gap-4 hover:text-white transition group break-all">
+                        <div class="bg-red-500/20 p-3 rounded-full group-hover:bg-red-500/30 transition">
+                            <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="font-medium">bankebiharisikaha@gmail.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto text-center mt-12 border-t border-gray-800 pt-8 text-gray-500 text-sm">
+            <p>&copy; 2026 श्री बांके बिहारी शिक्षा प्रसार समिति। सर्वाधिकार सुरक्षित।</p>
+        </div>
+    </footer>
+
+    <script src="data/education.js"></script>
+    <script>
+        (function() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if(btn && menu) {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    menu.style.display = (menu.style.display === 'none' || menu.style.display === '') ? 'block' : 'none';
+                });
+            }
+
+            try {
+                if(typeof PAGE_DATA === 'undefined') throw new Error("Data missing");
+                const pageData = PAGE_DATA;
+
+                document.getElementById('page-hero').style.backgroundImage = `linear-gradient(rgba(26, 54, 93, 0.7), rgba(26, 54, 93, 0.9)), url('${pageData.cover_image}')`;
+                document.getElementById('hero-title').innerText = pageData.title;
+                document.getElementById('hero-subtitle').innerText = pageData.subtitle;
+
+                const events = document.getElementById('events-container');
+                events.innerHTML = pageData.events.map(ev => `
+                    <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <span class="inline-block bg-white text-secondary text-sm font-bold px-4 py-1 rounded-full border border-orange-100 mb-4 shadow-sm">${ev.date}</span>
+                        <h3 class="text-xl font-extrabold text-primary mb-2">${ev.title}</h3>
+                        <p class="text-sm text-gray-500 font-medium mb-4 flex items-center gap-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            ${ev.location}
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">${ev.desc}</p>
+                    </div>`).join('') || '<p class="text-gray-500 italic">फ़िलहाल कोई कार्यक्रम नहीं है।</p>';
+
+                const gallery = document.getElementById('gallery-container');
+                gallery.innerHTML = pageData.photos.map(url => `
+                    <div class="masonry-item rounded-2xl overflow-hidden shadow-lg group relative bg-white">
+                        <img src="${url}" alt="Gallery Photo" class="w-full h-auto object-cover transform transition duration-700 group-hover:scale-105" loading="lazy">
+                    </div>`).join('') || '<p class="text-gray-500 italic">तस्वीरें जल्द आ रही हैं।</p>';
+
+                const videos = document.getElementById('videos-container');
+                videos.innerHTML = pageData.videos.map(url => `
+                    <div class="rounded-3xl overflow-hidden shadow-2xl relative aspect-video bg-gray-900 border-4 border-blue-900">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="${url}" frameborder="0" allowfullscreen></iframe>
+                    </div>`).join('') || '<p class="text-blue-200 italic">वीडियो जल्द आ रहे हैं।</p>';
+            } catch(e) {
+                document.getElementById('hero-title').innerText = "डेटा लोड करने में त्रुटि";
+            }
+        })();
+    </script>
+</body>
+</html>

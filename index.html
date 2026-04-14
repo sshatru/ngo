@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="hi" class="scroll-smooth scroll-pt-20">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>श्री बांके बिहारी शिक्षा प्रसार समिति - NGO</title>
+    <meta name="description" content="श्री बांके बिहारी शिक्षा प्रसार समिति: शिक्षा, गरीबों की मदद व गौ सेवा। हमारे इस पुण्य कार्य में सहयोग करें।">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { primary: '#1A365D', secondary: '#F97316', accent: '#166534' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(26, 54, 93, 0.7), rgba(26, 54, 93, 0.8)), url('https://loremflickr.com/1920/1080/charity,volunteer/all');
+            background-size: cover; background-position: center; background-attachment: fixed;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translate3d(0, 40px, 0); }
+            to { opacity: 1; transform: translate3d(0, 0, 0); }
+        }
+        .animate-fade-in-up { animation: fadeInUp 0.6s ease-out forwards; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        #mobile-menu { display: none; }
+    </style>
+</head>
+<body class="antialiased text-gray-800 bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Sticky Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white shadow-md transition-all duration-300">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center relative">
+            <a href="#" class="text-xl md:text-2xl font-extrabold text-primary flex items-center gap-2 tracking-tight whitespace-nowrap">
+                श्री बांके बिहारी शिक्षा प्रसार समिति
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center space-x-8 font-medium">
+                <a href="#about" class="text-gray-600 hover:text-primary transition-colors text-sm uppercase">हमारे बारे में</a>
+                <a href="gow-sewa.html" class="text-gray-600 hover:text-primary transition-colors text-sm uppercase">गौ सेवा</a>
+                <a href="relief-work.html" class="text-gray-600 hover:text-primary transition-colors text-sm uppercase">राहत कार्य</a>
+                <a href="education.html" class="text-gray-600 hover:text-primary transition-colors text-sm uppercase">शिक्षा</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="#donate" class="hidden md:inline-block bg-secondary hover:bg-orange-600 text-white font-semibold py-2.5 px-6 rounded-full shadow-lg transition duration-300 transform hover:-translate-y-0.5">
+                    अभी दान करें
+                </a>
+                
+                <button id="mobile-menu-btn" class="lg:hidden text-primary focus:outline-none p-2" aria-label="Toggle Menu">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav id="mobile-menu" class="absolute w-full left-0 bg-white border-t border-gray-100 shadow-xl z-40">
+             <div class="px-6 py-6 flex flex-col space-y-4">
+                <a href="#about" class="text-gray-600 font-medium text-lg mobile-link">हमारे बारे में</a>
+                <a href="gow-sewa.html" class="text-gray-600 font-medium text-lg mobile-link">गौ सेवा</a>
+                <a href="relief-work.html" class="text-gray-600 font-medium text-lg mobile-link">राहत कार्य</a>
+                <a href="education.html" class="text-gray-600 font-medium text-lg mobile-link">शिक्षा</a>
+                <a href="#donate" class="text-center bg-secondary hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-full shadow transition duration-300 mobile-link mt-4">
+                    अभी दान करें
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section id="about" class="hero-bg min-h-screen flex items-center justify-center text-center px-4 relative overflow-hidden">
+            <div class="max-w-4xl relative z-10 animate-fade-in-up pt-16">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 tracking-tight drop-shadow-xl">
+                    श्री बांके बिहारी शिक्षा प्रसार समिति
+                </h1>
+                
+                <p class="text-lg md:text-2xl text-yellow-300 font-bold mb-4 drop-shadow-md">
+                    शिक्षा, गरीबों की मदद व गौ सेवा
+                </p>
+                <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-medium drop-shadow-md">
+                    आप सभी से विनम्र निवेदन है की इस पुण्य कार्य में सहयोग करें। आपका छोटा सा सहयोग किसी के जीवन में बड़ा बदलाव ला सकता है। 
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#our-work" class="bg-primary hover:bg-blue-800 text-white font-bold py-4 px-8 rounded-full shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        हमारे कार्य
+                    </a>
+                    <a href="#donate" class="bg-secondary hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        सहयोग करें
+                    </a>
+                </div>
+            </div>
+            
+            <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-0">
+                <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block h-[50px] md:h-[80px] w-full" style="width: calc(100% + 1.3px);"><path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" fill="#f9fafb"></path></svg>
+            </div>
+        </section>
+
+        <!-- Our Pillars -->
+        <section id="our-work" class="py-24 bg-gray-50 relative overflow-hidden">
+            <div class="container mx-auto px-4 max-w-6xl relative z-10">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-primary mb-4">हमारी मुख्य पहल</h2>
+                    <p class="text-lg text-gray-600">हमारे चल रहे प्रयासों के बारे में अधिक जानने के लिए एक क्षेत्र चुनें।</p>
+                </div>
+
+                <!-- Tab Toggles -->
+                <div class="flex flex-wrap justify-center gap-3 sm:gap-4 mb-16 px-2">
+                    <button class="tab-btn w-full sm:w-auto active bg-primary text-white border border-primary font-bold py-3 px-8 rounded-full shadow-lg transition duration-300" data-target="#gow-sewa-content">
+                        गौ सेवा
+                    </button>
+                    <button class="tab-btn w-full sm:w-auto bg-white text-gray-600 border border-gray-200 font-bold py-3 px-8 rounded-full shadow transition duration-300" data-target="#relief-work-content">
+                        राहत कार्य
+                    </button>
+                    <button class="tab-btn w-full sm:w-auto bg-white text-gray-600 border border-gray-200 font-bold py-3 px-8 rounded-full shadow transition duration-300" data-target="#education-content">
+                        मुफ़्त शिक्षा
+                    </button>
+                </div>
+
+                <div class="relative min-h-[500px]">
+                    <!-- Content 1: Gow Sewa -->
+                    <div id="gow-sewa-content" class="tab-content active animate-fade-in-up">
+                        <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+                            <div class="w-full lg:w-1/2">
+                                <div class="inline-block bg-green-100 text-accent font-semibold px-4 py-1.5 rounded-full mb-6 text-sm tracking-wide">अभियान 1</div>
+                                <h3 class="text-3xl lg:text-4xl font-bold text-primary mb-2">गौ सेवा <span class="text-2xl text-gray-500 font-normal">(गौशाला)</span></h3>
+                                <p class="text-lg text-gray-600 mt-6 mb-6 leading-relaxed">
+                                    गाय हमारी संस्कृति में पूजनीय है, फिर भी कई गायों को सड़कों पर लावारिस छोड़ दिया जाता है। हमारी समिति इन कोमल जीवों के लिए एक सुरक्षित आश्रय और आजीवन देखभाल प्रदान करती है।
+                                </p>
+                                <div class="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-accent mt-6 mb-8 transform transition hover:-translate-y-1">
+                                    <h4 class="text-xl font-bold text-gray-800">आज ही प्रभाव डालें</h4>
+                                    <p class="text-3xl font-extrabold text-accent mb-2">₹500 <span class="text-base font-normal">एक गाय को सप्ताह भर का भोजन</span></p>
+                                </div>
+                                <a href="gow-sewa.html" class="inline-flex items-center justify-center bg-primary hover:bg-blue-800 text-white font-bold py-4 px-8 rounded-full shadow-lg transition duration-300">
+                                    गौशाला गैलरी और कार्यक्रम देखें &rsaquo;
+                                </a>
+                            </div>
+                            <div class="w-full lg:w-1/2 relative">
+                                <div class="rounded-3xl overflow-hidden shadow-2xl relative group bg-white border-8 border-white">
+                                    <img src="https://loremflickr.com/800/600/cow,india/all" alt="Cows in Gaushala" class="w-full h-auto object-cover transform transition duration-700 group-hover:scale-105" loading="lazy">
+                                    <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition duration-500 pointer-events-none"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content 2: Relief Work -->
+                    <div id="relief-work-content" class="tab-content">
+                        <div class="text-center max-w-3xl mx-auto mb-12">
+                            <div class="inline-block bg-orange-100 text-secondary font-semibold px-4 py-1.5 rounded-full mb-6 text-sm tracking-wide">अभियान 2</div>
+                            <h3 class="text-3xl lg:text-4xl font-bold text-primary mb-2">गरीबों की मदद</h3>
+                            <p class="text-lg text-gray-600 mt-6 leading-relaxed">
+                                हम समाज के सबसे कमजोर और जरूरतमंद लोगों तक पहुंचने और उन्हें तत्काल राहत देने के लिए प्रतिबद्ध हैं।
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-16">
+                            <figure class="rounded-2xl overflow-hidden shadow-lg group bg-white">
+                                <div class="overflow-hidden">
+                                    <img src="https://loremflickr.com/600/400/food,charity/all" class="w-full h-64 object-cover transform transition duration-700 group-hover:scale-110" loading="lazy">
+                                </div>
+                                <figcaption class="bg-gray-50 p-5 text-center border-t border-gray-100">
+                                    <h4 class="font-bold text-primary text-lg">भूखों को भोजन</h4>
+                                    <p class="text-sm text-gray-500 mt-1">प्रतिदिन मुफ्त भोजन</p>
+                                </figcaption>
+                            </figure>
+                            <figure class="rounded-2xl overflow-hidden shadow-lg group bg-white">
+                                <div class="overflow-hidden">
+                                    <img src="https://loremflickr.com/600/400/clothing,donation/all" class="w-full h-64 object-cover transform transition duration-700 group-hover:scale-110" loading="lazy">
+                                </div>
+                                <figcaption class="bg-gray-50 p-5 text-center border-t border-gray-100">
+                                    <h4 class="font-bold text-primary text-lg">कंबल और कपड़े</h4>
+                                    <p class="text-sm text-gray-500 mt-1">सर्दी से बचाव कार्य</p>
+                                </figcaption>
+                            </figure>
+                            <figure class="rounded-2xl overflow-hidden shadow-lg group bg-white md:col-span-1 sm:col-span-2">
+                                <div class="overflow-hidden">
+                                    <img src="https://loremflickr.com/600/400/helping,poor/all" class="w-full h-64 md:h-64 sm:h-96 object-cover transform transition duration-700 group-hover:scale-110" loading="lazy">
+                                </div>
+                                <figcaption class="bg-gray-50 p-5 text-center border-t border-gray-100">
+                                    <h4 class="font-bold text-primary text-lg">आपातकालीन बचाव</h4>
+                                    <p class="text-sm text-gray-500 mt-1">सुरक्षा एवं आश्रय अभियान</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="text-center">
+                            <a href="relief-work.html" class="inline-flex items-center justify-center bg-secondary hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transition duration-300">
+                                राहत अभियान और गैलरी देखें &rsaquo;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Content 3: Education -->
+                    <div id="education-content" class="tab-content">
+                        <div class="flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-16">
+                            <div class="w-full lg:w-1/2 relative">
+                                <div class="rounded-3xl overflow-hidden shadow-2xl relative group bg-white border-8 border-white">
+                                    <img src="https://loremflickr.com/800/600/indian-children,school/all" class="w-full h-auto object-cover transform transition duration-1000 group-hover:scale-105" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="w-full lg:w-1/2">
+                                <div class="inline-block bg-blue-100 text-blue-800 font-semibold px-4 py-1.5 rounded-full mb-6 text-sm tracking-wide">अभियान 3</div>
+                                <h3 class="text-3xl lg:text-4xl font-bold text-primary mb-2">गरीब असहाय की शिक्षा</h3>
+                                <p class="text-lg text-gray-600 mt-6 mb-6 leading-relaxed">
+                                    शिक्षा गरीबी के चक्र को तोड़ने का सबसे शक्तिशाली उपकरण है।
+                                </p>
+                                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                                    हम वंचित बच्चों को निःशुल्क शिक्षा, किताबें और आवश्यक स्टेशनरी प्रदान करते हैं ताकि उनका भविष्य उज्ज्वल हो सके।
+                                </p>
+                                <a href="education.html" class="inline-flex items-center justify-center bg-primary hover:bg-blue-800 text-white font-bold py-4 px-8 rounded-full shadow-lg transition duration-300">
+                                    कक्षाएं और कार्यक्रम देखें &rsaquo;
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Official Donation Section -->
+        <section id="donate" class="py-24 bg-primary text-white relative">
+            <div class="container mx-auto px-4 max-w-6xl relative z-10">
+                <div class="text-center mb-16 px-4">
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 tracking-tight">इस पुण्य कार्य में सहयोग करें।</h2>
+                    <p class="text-xl text-blue-200 mt-4 max-w-3xl mx-auto font-medium">"आपका छोटा सा सहयोग किसी के जीवन में बड़ा बदलाव ला सकता है।"</p>
+                </div>
+                
+                <div class="bg-white text-gray-800 rounded-3xl shadow-2xl overflow-hidden flex flex-col lg:flex-row max-w-5xl mx-auto transform transition duration-500 hover:shadow-3xl border border-gray-100">
+                    
+                    <!-- Bank Details Panel -->
+                    <div class="w-full lg:w-1/2 p-8 md:p-12 bg-gray-50 flex flex-col justify-center border-r border-gray-200">
+                        <h3 class="text-3xl font-extrabold text-primary mb-8 border-b-4 border-secondary pb-4 inline-block self-start">बैंक विवरण (Bank Details)</h3>
+                        <div class="space-y-5">
+                            <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-200">
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1 flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/><path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/></svg>
+                                    Bank Name
+                                </p>
+                                <p class="text-xl font-bold text-gray-800">Punjab National Bank</p>
+                            </div>
+                            <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-200">
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1 flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/></svg>
+                                    Account Name
+                                </p>
+                                <p class="text-xl font-bold text-gray-800 line-clamp-1">Shri Banke Bihari Shiksha Prasar Samiti</p>
+                            </div>
+                            <div class="bg-white p-5 rounded-2xl shadow-sm border-l-4 border-l-secondary border-gray-200 bg-orange-50/20">
+                                <p class="text-xs text-orange-600 font-bold uppercase tracking-wider mb-1">Account Number</p>
+                                <p class="text-2xl font-extrabold text-primary tracking-widest">1239002100016010</p>
+                            </div>
+                            <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-200">
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">IFSC Code</p>
+                                <p class="text-xl font-bold text-gray-800">PUNB0123900</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- UPI Panel -->
+                    <div class="w-full lg:w-1/2 p-8 md:p-12 flex flex-col justify-center items-center text-center bg-white relative">
+                        <!-- Subltle Pattern -->
+                        <div class="absolute inset-0 opacity-[0.02] pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'1\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E');"></div>
+                        
+                        <h3 class="text-2xl font-extrabold text-gray-800 mb-2 relative z-10">SCAN & PAY</h3>
+                        <p class="text-gray-500 text-sm mb-8 relative z-10">PhonePe, GPay, Paytm या किसी भी UPI ऐप से स्कैन करें</p>
+                        
+                        <div class="border-4 border-gray-100 rounded-3xl p-6 shadow-sm mb-6 inline-block bg-white relative z-10 transform hover:scale-105 transition-transform duration-300">
+                            <!-- Official Replaceable QR Placeholder (Would swap with real QR) -->
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=upi://pay?pa=9559322718m@pnb&pn=Shri%20Banke%20Bihari&cu=INR" alt="UPI QR Code" class="w-56 h-56 object-cover rounded-xl" title="Scan to Donate">
+                        </div>
+                        
+                        <div class="bg-blue-50 border border-blue-200 shadow-inner rounded-xl px-8 py-4 relative z-10">
+                            <p class="text-xs font-bold text-gray-500 mb-1 uppercase tracking-wider">UPI ID</p>
+                            <p class="text-xl font-extrabold text-primary">9559322718m@pnb</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="bg-[#111827] text-gray-300 py-16 border-t border-gray-800 text-center md:text-left">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center md:items-start gap-12">
+            
+            <div class="md:w-1/2">
+                <h4 class="text-white text-2xl font-extrabold mb-4 tracking-tight">श्री बांके बिहारी शिक्षा प्रसार समिति</h4>
+                <p class="text-base text-gray-400 max-w-lg mx-auto md:mx-0 leading-relaxed">
+                    आप सभी से विनम्र निवेदन है की इस पुण्य कार्य (शिक्षा, गरीबों की मदद व गौ सेवा) में सहयोग करें। आपका छोटा सा सहयोग किसी के जीवन में बड़ा बदलाव ला सकता है। धन्यवाद्।
+                </p>
+            </div>
+            
+            <div class="md:w-1/2 flex flex-col items-center md:items-end gap-6 w-full">
+                <div class="flex flex-col gap-4 bg-gray-800/50 p-6 rounded-2xl border border-gray-700 w-full max-w-sm">
+                    <h5 class="text-white font-bold text-lg mb-2 border-b border-gray-700 pb-2">संपर्क करें (Contact Us)</h5>
+                    <a href="https://wa.me/919559322718" target="_blank" class="flex items-center gap-4 hover:text-white transition group">
+                        <div class="bg-green-500/20 p-3 rounded-full group-hover:bg-green-500/30 transition">
+                            <svg class="w-6 h-6 text-green-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.573-.187-.982-.365-2.114-.92-3.483-3.078-3.587-3.216-.104-.138-.859-1.144-.859-2.183 0-1.04.542-1.554.733-1.761.191-.208.414-.26.551-.26.138 0 .276.001.393.006.126.006.295-.049.444.316.149.366.505 1.238.55 1.332.046.094.076.204.004.348-.065.145-.102.234-.236.388-.133.153-.284.34-.403.458-.127.126-.263.264-.112.527.152.261.677 1.119 1.455 1.815.998.89 1.826 1.157 2.083 1.28.257.124.407.104.561-.072.153-.176.666-.777.844-1.044.178-.268.356-.223.593-.134.238.089 1.5.707 1.76.837.259.13.432.194.494.303.064.108.064.629-.08 1.034z"/></svg>
+                        </div>
+                        <span class="font-semibold text-lg tracking-wide">+91 9559322718</span>
+                    </a>
+                    <a href="mailto:bankebiharisikaha@gmail.com" class="flex items-center gap-4 hover:text-white transition group break-all">
+                        <div class="bg-red-500/20 p-3 rounded-full group-hover:bg-red-500/30 transition">
+                            <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="font-medium">bankebiharisikaha@gmail.com</span>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="container mx-auto text-center mt-12 border-t border-gray-800 pt-8 text-gray-500 text-sm">
+            <p>&copy; 2026 श्री बांके बिहारी शिक्षा प्रसार समिति। सर्वाधिकार सुरक्षित। (Shri Banke Bihari Shiksha Prasar Samiti)</p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE SCRIPTS -->
+    <script>
+        (function() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if (btn && menu) {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (menu.style.display === 'none' || menu.style.display === '') {
+                        menu.style.display = 'block';
+                        btn.innerHTML = '<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
+                    } else {
+                        menu.style.display = 'none';
+                        btn.innerHTML = '<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>';
+                    }
+                });
+                document.querySelectorAll('.mobile-link').forEach(link => {
+                    link.addEventListener('click', function() {
+                        menu.style.display = 'none';
+                        btn.innerHTML = '<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>';
+                    });
+                });
+            }
+
+            const activeAnimations = {}; 
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            function switchTab(targetId) {
+                if(!targetId) return;
+                tabBtns.forEach(btn => {
+                    btn.classList.remove('bg-primary', 'text-white', 'shadow-lg');
+                    btn.classList.add('bg-white', 'text-gray-600', 'shadow');
+                });
+                const activeBtn = document.querySelector('.tab-btn[data-target="' + targetId + '"]');
+                if(activeBtn) {
+                    activeBtn.classList.add('bg-primary', 'text-white', 'shadow-lg');
+                    activeBtn.classList.remove('bg-white', 'text-gray-600', 'shadow');
+                }
+                tabContents.forEach(c => c.classList.remove('active', 'animate-fade-in-up'));
+                
+                const showContent = document.querySelector(targetId);
+                if(showContent) {
+                    showContent.classList.add('active');
+                    setTimeout(() => showContent.classList.add('animate-fade-in-up'), 10);
+                }
+            }
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    switchTab(this.getAttribute('data-target'));
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
